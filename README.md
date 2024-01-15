@@ -22,15 +22,18 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Route:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- "/" - homepage, hanya menampilkan tombol untuk menuju halaman Admin.
+- "/admin" - admin, halaman dimana user dapat mengisi profile dan portofolio.
+- "/web" - web, halaman untuk menampilkan portofolio kepada publik.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Skema penyimpanan data:
 
-## Deploy on Vercel
+Data profile & portofolio disimpan ke dalam LocalStorage browser dengan key "porto". Data di dalam LocalStorage akan diperbarui sesuai dengan pembaruan dihalaman admin ('/admin')
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Desain:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Aplikasi dibuat dengan desain dari referensi yang diberikan melalui Figma. Saya menggunakan [https://ui.shadcn.com/](ShadCN) UI sebagai UI Component. Detail desain seperti komponen input mengikuti desain default ShadCN UI yang menurut saya cukup mirip dengan referensi desain. Sisanya saya mencoba untuk membuat tampilkan sesuai dengan referensi.
+
+Saya menambahkan animasi menggunakan [https://www.framer.com/motion/](Framer Motion) pada bagian group field yang memiliki fitur expand - collaps. Kemudian saya tambahkan juga komponent navbar dan footer sebagai pelengkap. Dibagian kanan navbar terdapat tombol menuju halaman portofolio publik ('/web') untuk melihat hasil portofolio.
