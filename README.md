@@ -2,23 +2,24 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+1.  Clone the repository:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    ```bash
+    git clone https://github.com/ssatriya/portofolio-app.git
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2.  Open the project:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    ```bash
+    cd portofolio-app
+    npm install
+    ```
+
+3.  Start the project
+    ```bash
+    npm run dev
+    ```
 
 ## Learn More
 
