@@ -34,6 +34,6 @@ Data profile & portofolio disimpan ke dalam LocalStorage browser dengan key "por
 
 Desain:
 
-Aplikasi dibuat dengan desain dari referensi yang diberikan melalui Figma. Saya menggunakan [https://ui.shadcn.com/](ShadCN) UI sebagai UI Component. Detail desain seperti komponen input mengikuti desain default ShadCN UI yang menurut saya cukup mirip dengan referensi desain. Sisanya saya mencoba untuk membuat tampilkan sesuai dengan referensi.
+Aplikasi dibuat dengan desain dari referensi yang diberikan melalui Figma. Saya menggunakan `ShadCN UI` sebagai UI Component. Detail desain seperti komponen input mengikuti desain default ShadCN UI yang menurut saya cukup mirip dengan referensi desain. Sisanya saya mencoba untuk membuat tampilkan sesuai dengan referensi.
 
-Saya menambahkan animasi menggunakan [https://www.framer.com/motion/](Framer Motion) pada bagian group field yang memiliki fitur expand - collaps. Kemudian saya tambahkan juga komponent navbar dan footer sebagai pelengkap. Dibagian kanan navbar terdapat tombol menuju halaman portofolio publik ('/web') untuk melihat hasil portofolio.
+Saya menambahkan animasi menggunakan `Framer Motion` pada bagian group field yang memiliki fitur expand - collaps. Kemudian saya tambahkan juga komponent navbar dan footer sebagai pelengkap. Dibagian kanan navbar terdapat tombol menuju halaman portofolio publik ('/web') untuk melihat hasil portofolio.
