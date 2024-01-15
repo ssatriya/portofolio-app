@@ -5,3 +5,4 @@ export const ACCEPTED_IMAGE_TYPES = [
   "image/png",
   "image/webp",
 ];
+export const MAX_PORTOFOLIO_FIELD = 10;

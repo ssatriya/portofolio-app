@@ -5,24 +5,19 @@ import { toast } from "sonner";
 import { useLocalStorage } from "usehooks-ts";
 import { useFieldArray, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { PlusIcon } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import { InputProfileSchema, InputProfileType } from "@/schema/profile-input";
 import { Form } from "@/components/ui/form";
 import { useFieldToggle } from "@/hooks/use-field-toggle";
 import ProfilePreview from "@/components/profile/profile-preview";
-import BackgroundImage from "./input/background-image";
-import ProfileImage from "./input/profile-image";
-import ProfileInputGroup from "./input/profile-input-group";
+import BackgroundImage from "@/components/profile/input/background-image";
+import ProfileImage from "@/components/profile/input/profile-image";
+import ProfileInputGroup from "@/components/profile/input/profile-input-group";
 import PortofolioInputGroup from "@/components/profile/input/portofolio-input-group";
-
-import useMeasure from "react-use-measure";
-import { motion } from "framer-motion";
-import ProfileWrapper from "./profile-wrapper";
+import ProfileWrapper from "@/components/profile/profile-wrapper";
+import { MAX_PORTOFOLIO_FIELD } from "@/config";
 
 const ProfileForm = () => {
-  const [ref, { height }] = useMeasure();
   const [isMounted, setIsMounted] = React.useState(false);
   const [localPorto, setLocalPorto] = useLocalStorage<InputProfileType | null>(
     "porto",
@@ -82,6 +77,8 @@ const ProfileForm = () => {
   };
 
   const onSubmit = async (values: InputProfileType) => {
+    if (fields.length >= MAX_PORTOFOLIO_FIELD) return;
+
     const portoData = {
       ...values,
       backgroundImage: values.backgroundImage,
@@ -96,8 +93,13 @@ const ProfileForm = () => {
   if (!isMounted) return null;
 
   return (
-    <ProfileWrapper append={append} isDirty={isDirty}>
+    <ProfileWrapper
+      append={append}
+      isDirty={isDirty}
+      fieldLimit={fields.length}
+    >
       <div className="w-full">
+        {/* Form */}
         <Form {...form}>
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -134,6 +136,7 @@ const ProfileForm = () => {
         </Form>
       </div>
       <div className="w-full">
+        {/* Preview */}
         <ProfilePreview watchedForm={watchedForm} />
       </div>
     </ProfileWrapper>

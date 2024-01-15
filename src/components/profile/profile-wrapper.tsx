@@ -1,17 +1,25 @@
 "use client";
 
 import { PlusIcon } from "lucide-react";
-import { Button } from "../ui/button";
 import { UseFieldArrayAppend } from "react-hook-form";
+
+import { Button } from "@/components/ui/button";
 import { InputProfileType } from "@/schema/profile-input";
+import { MAX_PORTOFOLIO_FIELD } from "@/config";
 
 type ProfileWrapperProps = {
   children: React.ReactNode;
   append: UseFieldArrayAppend<InputProfileType, "portofolio">;
   isDirty: boolean;
+  fieldLimit: number;
 };
 
-const ProfileWrapper = ({ children, append, isDirty }: ProfileWrapperProps) => {
+const ProfileWrapper = ({
+  children,
+  append,
+  isDirty,
+  fieldLimit,
+}: ProfileWrapperProps) => {
   return (
     <div className="p-3 h-full overflow-y-hidden">
       <div className="flex gap-4 mb-8">
@@ -26,6 +34,7 @@ const ProfileWrapper = ({ children, append, isDirty }: ProfileWrapperProps) => {
               portofolioDescription: "",
             });
           }}
+          disabled={fieldLimit >= MAX_PORTOFOLIO_FIELD}
         >
           <PlusIcon className="h-4 w-4 mr-2" />
           Add Portofolio

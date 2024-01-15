@@ -37,3 +37,7 @@ Desain:
 Aplikasi dibuat dengan desain dari referensi yang diberikan melalui Figma. Saya menggunakan `ShadCN UI` sebagai UI Component. Detail desain seperti komponen input mengikuti desain default ShadCN UI yang menurut saya cukup mirip dengan referensi desain. Sisanya saya mencoba untuk membuat tampilkan sesuai dengan referensi.
 
 Saya menambahkan animasi menggunakan `Framer Motion` pada bagian group field yang memiliki fitur expand - collaps. Kemudian saya tambahkan juga komponent navbar dan footer sebagai pelengkap. Dibagian kanan navbar terdapat tombol menuju halaman portofolio publik ('/web') untuk melihat hasil portofolio.
+
+Misc:
+
+Saya menyimpan `state` dari field collapes/expand ke dalam LocalStorage dengan tujuan user bisa dengan mudah fokus pada field yang ingin mereka isi saat pertama kali app di load.
