@@ -9,7 +9,7 @@ const Navbar = () => {
         Portofolio App <ScrollText className="w-5 h-5 ml-2 text-[#10A4B0]" />
       </div>
       <Button variant="link" className="font-semibold text-[#10A4B0]">
-        <a href={`${process.env.NEXT_PUBLIC_URL}/web`} target="__blank">
+        <a href={`https://portofolio-app.ssatriya.com/web`} target="__blank">
           View Portofolio
         </a>
       </Button>
